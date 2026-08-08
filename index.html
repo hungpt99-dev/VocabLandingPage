@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vocab — Save words while you browse</title>
+  <meta name="description" content="A local-first Chrome extension that saves words while you read, highlights them on every page, and explains them with your own AI key. No backend, no account, no telemetry." />
+  <meta name="theme-color" content="#0b0c10" />
+  <meta property="og:title" content="Vocab — Save words while you browse" />
+  <meta property="og:description" content="A local-first Chrome extension that saves, highlights, and explains vocabulary with your own AI key." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Vocab home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </span>
+        <span class="brand-name">Vocab</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="https://github.com/hungpt99-dev/Vocab" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary" href="https://github.com/hungpt99-dev/Vocab/releases" target="_blank" rel="noopener">
+          <i data-lucide="chrome"></i> Add to Chrome
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Local-first · AI-powered</span>
+          <h1>Save the words you meet<br />while you browse.</h1>
+          <p class="lead">
+            Vocab is a lightweight Chrome extension that saves words while you read, highlights them
+            on every page you visit, and explains them using <strong>your own AI key</strong>.
+            No backend. No account. No telemetry.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="https://github.com/hungpt99-dev/Vocab/releases" target="_blank" rel="noopener">
+              <i data-lucide="download"></i> Get Vocab free
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#how">
+              <i data-lucide="play"></i> See how it works
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>6+</strong><span>AI providers</span></div>
+            <div><strong>0</strong><span>accounts needed</span></div>
+            <div><strong>100%</strong><span>local data</span></div>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="browser">
+            <div class="browser-bar">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="browser-url">reading an article…</span>
+            </div>
+            <div class="browser-body">
+              <p>
+                The researcher <mark class="hl">postulated</mark> a direct link between sleep and
+                memory, though critics <mark class="hl">refuted</mark> the claim.
+              </p>
+              <div class="popover">
+                <div class="popover-head">
+                  <strong>postulated</strong>
+                  <span class="ipa">/ˈpɒstjʊleɪt/</span>
+                </div>
+                <p class="popover-def">To suggest or assume as a basis for reasoning.</p>
+                <div class="popover-actions">
+                  <button class="chip"><i data-lucide="sparkles"></i> Explain</button>
+                  <button class="chip"><i data-lucide="languages"></i> Translate</button>
+                  <button class="chip chip-save"><i data-lucide="bookmark"></i> Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Everything you need</span>
+          <h2>Everything you need to learn through reading</h2>
+          <p>Vocab turns the pages you already read into a connected vocabulary workflow — from saving a word to reviewing it later.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card reveal">
+            <span class="card-icon"><i data-lucide="mouse-pointer-click"></i></span>
+            <h3>Save a selection</h3>
+            <p>Right-click, use the popup, or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>. Saving a word costs one keystroke.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><i data-lucide="wand-2"></i></span>
+            <h3>Smart selection toolbar</h3>
+            <p>Select any text to get a floating toolbar: explain with AI, translate, save, copy, or copy the source sentence.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><i data-lucide="highlighter"></i></span>
+            <h3>On-page highlighting</h3>
+            <p>Saved words are highlighted everywhere — even both columns of bilingual pages. Hover or focus to see the meaning.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><i data-lucide="brain-circuit"></i></span>
+            <h3>AI Explain</h3>
+            <p>Get meaning, a simple explanation, examples, synonyms, IPA pronunciation, and collocations — from your own model.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><i data-lucide="key-round"></i></span>
+            <h3>Bring your own key</h3>
+            <p>OpenAI, OpenRouter, Google Gemini, Anthropic, Ollama and LM Studio. You pick the model; your key never leaves the browser.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><i data-lucide="database"></i></span>
+            <h3>Portable data</h3>
+            <p>Versioned JSON export and import with merge or replace. Take your vocabulary anywhere, any time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section section-alt" id="how">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Your reading loop</span>
+          <h2>Every page you read becomes a lesson</h2>
+          <p>Vocab connects reading, understanding, saving, and review around the same content you actually want to read.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <span class="step-num">1</span>
+            <h3>Read</h3>
+            <p>Browse articles, PDFs, and web pages like you normally do. No change to your workflow.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">2</span>
+            <h3>Save</h3>
+            <p>Select a word or phrase and save it with its context, source, and a note in one move.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">3</span>
+            <h3>Highlight</h3>
+            <p>Saved words light up on every page you visit, so recall happens passively as you read.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">4</span>
+            <h3>Review &amp; use</h3>
+            <p>Search, favourite, tag, and re-explain from your library. Learning compounds over time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVACY -->
+    <section class="section" id="privacy">
+      <div class="container privacy-grid">
+        <div class="privacy-copy reveal">
+          <span class="eyebrow">Local-first by design</span>
+          <h2>More personal than a fixed course, more private than a SaaS</h2>
+          <p>
+            Most vocabulary tools ask you to leave the page, create an account, pay a subscription,
+            or hand over your browsing data. Vocab takes a different position: everything stays in
+            your browser.
+          </p>
+          <ul class="checklist">
+            <li><i data-lucide="check"></i> No backend server — your words never leave your machine</li>
+            <li><i data-lucide="check"></i> No account, no login, no email required</li>
+            <li><i data-lucide="check"></i> No telemetry or tracking of any kind</li>
+            <li><i data-lucide="check"></i> AI calls go straight from your browser to your provider</li>
+          </ul>
+        </div>
+        <div class="privacy-card reveal">
+          <div class="privacy-badge"><i data-lucide="shield-check"></i></div>
+          <h3>Your data is yours</h3>
+          <p>Stored in IndexedDB on your device. Export anytime as plain JSON. Delete in one click.</p>
+          <a class="btn btn-ghost" href="https://github.com/hungpt99-dev/Vocab#privacy" target="_blank" rel="noopener">Read the privacy note</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+      <div class="container narrow">
+        <div class="section-head reveal">
+          <span class="eyebrow">Questions</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item reveal">
+            <summary>What is Vocab?<i data-lucide="chevron-down"></i></summary>
+            <p>A local-first Chrome extension that saves words while you browse, highlights them everywhere you go, and explains them with your own AI provider key.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Do I need an account?<i data-lucide="chevron-down"></i></summary>
+            <p>No. Vocab has no backend and no account. You add your own AI provider key in the options page, and all data is stored locally in your browser.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Which AI providers are supported?<i data-lucide="chevron-down"></i></summary>
+            <p>OpenAI, OpenRouter, Google Gemini, Anthropic, Ollama, and LM Studio. You choose the model and control every request.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Is my browsing data tracked?<i data-lucide="chevron-down"></i></summary>
+            <p>No. There is no telemetry. Saved words, notes, and settings live in your browser's IndexedDB and are never uploaded anywhere except directly to the AI provider you configure.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Does it work on bilingual pages?<i data-lucide="chevron-down"></i></summary>
+            <p>Yes. Vocab highlights saved words in both columns of original/translation layouts, so passive recall works even when you read side by side.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Can I move my vocabulary to another device?<i data-lucide="chevron-down"></i></summary>
+            <p>Yes. Export your library as versioned JSON and import it elsewhere, with merge or replace options.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta-inner reveal">
+        <h2>Start learning from the words you already meet every day</h2>
+        <p>Install Vocab, open something you genuinely want to read, and let the words you look up come back to you.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="https://github.com/hungpt99-dev/Vocab/releases" target="_blank" rel="noopener">
+            <i data-lucide="download"></i> Add Vocab to Chrome
+          </a>
+          <a class="btn btn-ghost btn-lg" href="https://github.com/hungpt99-dev/Vocab" target="_blank" rel="noopener">
+            <i data-lucide="github"></i> View source on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </span>
+          <span class="brand-name">Vocab</span>
+        </a>
+        <p>A local-first AI vocabulary saver for Chrome.</p>
+      </div>
+      <nav class="footer-col" aria-label="Product">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <h4>Resources</h4>
+        <a href="https://github.com/hungpt99-dev/Vocab" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/hungpt99-dev/Vocab/releases" target="_blank" rel="noopener">Releases</a>
+        <a href="https://github.com/hungpt99-dev/Vocab/issues" target="_blank" rel="noopener">Issues</a>
+        <a href="https://github.com/hungpt99-dev/Vocab/blob/main/LICENSE" target="_blank" rel="noopener">License</a>
+      </nav>
+      <nav class="footer-col" aria-label="Connect">
+        <h4>Connect</h4>
+        <a href="https://github.com/hungpt99-dev" target="_blank" rel="noopener">hungpt99-dev</a>
+        <a href="https://github.com/hungpt99-dev/Vocab/blob/main/README.md" target="_blank" rel="noopener">Documentation</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year">2026</span> Vocab. MIT Licensed.</span>
+      <a href="#top">Back to top <i data-lucide="arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="script.js"></script>
+</body>
+</html>
