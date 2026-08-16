@@ -11,11 +11,12 @@ explains them with your own AI key.
 ## Structure
 
 ```
-index.html   Hero, features, how-it-works, privacy, FAQ, CTA, footer
+index.html   Hero, features, how-it-works, X-Ray, privacy, FAQ, CTA, footer
 privacy.html Privacy policy page (local-first data practices, AI providers)
 assets/      Extension icons + real UI screenshots + og-image
-styles.css   Dark theme, tokens, responsive layout
+styles.css   Single stylesheet: dark theme, tokens, polish layer, responsive
 script.js    Lucide icons, scroll reveal, mobile nav, footer year, CHROME_STORE_URL
+enhance.js   Progressive polish: scroll progress, sticky header, scroll-spy, card spotlight
 ```
 
 ## Run locally
