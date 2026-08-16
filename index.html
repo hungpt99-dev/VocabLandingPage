@@ -16,10 +16,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="enhance.css" />
   <link rel="icon" type="image/png" href="assets/icon32.png" />
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <header class="site-header" id="top">
     <div class="container nav">
       <a class="brand" href="#top" aria-label="Vocab home">
@@ -28,6 +30,7 @@
       </a>
       <nav class="nav-links" aria-label="Primary">
         <a href="#features">Features</a>
+        <a href="#xray">X-Ray</a>
         <a href="#how">How it works</a>
         <a href="#radar">Radar</a>
         <a href="#privacy">Privacy</a>
@@ -50,8 +53,8 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-copy reveal">
-          <span class="eyebrow">Vocabulary learning, built into reading</span>
-          <h1>Learn the words you<br />actually encounter.</h1>
+<span class="eyebrow">Vocabulary learning, built into reading</span>
+          <h1>Save the words you meet<br /><span class="sheen">while you browse.</span></h1>
           <p class="lead">
             Vocab helps you save, understand, and revisit useful words while you read the web —
             so vocabulary learning happens naturally, without interrupting what you're doing.
@@ -372,9 +375,25 @@
             <p>A spaced-repetition queue flips each due word and grades your recall — Again, Hard, Good, Easy.</p>
           </article>
           <article class="card reveal">
+<article class="card reveal">
             <span class="card-icon"><i data-lucide="trophy"></i></span>
             <h3>Quiz yourself</h3>
             <p>Pick the right meaning from your own saved vocabulary, and watch your score grow.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><i data-lucide="wand-2"></i></span>
+            <h3>Smart selection toolbar</h3>
+            <p>Select any text to get a floating toolbar: explain with AI, translate, save, copy, or copy the source sentence.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><i data-lucide="scan-search"></i></span>
+            <h3>X-Ray Reading</h3>
+            <p>Highlight a whole sentence and look straight through it — structure, grammar, meaning, and why the writer wrote it that way, in any language.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><i data-lucide="highlighter"></i></span>
+            <h3>On-page highlighting</h3>
+            <p>Saved words are highlighted everywhere — even both columns of bilingual pages. Hover or focus to see the meaning.</p>
           </article>
           <article class="card reveal">
             <span class="card-icon"><i data-lucide="brain-circuit"></i></span>
@@ -442,7 +461,7 @@
       </div>
     </section>
 
-    <!-- EFFORTLESS -->
+<!-- EFFORTLESS -->
     <section class="band">
       <div class="container">
         <p class="reveal">
@@ -470,6 +489,45 @@
             <p class="byok-note">AI only runs when you ask for it.</p>
           </div>
         </article>
+      </div>
+    </section>
+
+    <!-- X-RAY READING -->
+    <section class="section xray" id="xray">
+      <div class="container xray-grid">
+        <div class="xray-copy reveal">
+          <span class="eyebrow">See inside a sentence</span>
+          <h2>X-Ray Reading, in your own language</h2>
+          <p>
+            Select a sentence and hit <strong>X-Ray Reading</strong>. Vocab lays the text open —
+            its structure, the grammar that matters, the real meaning in context, and the choices
+            the writer made.
+          </p>
+          <ul class="checklist">
+            <li><i data-lucide="git-branch"></i> Structure &amp; clauses, shown without grammar jargon</li>
+            <li><i data-lucide="quote"></i> Meaning, then a simpler version when it helps</li>
+            <li><i data-lucide="globe"></i> Works in English, Vietnamese, Japanese, Arabic &amp; more</li>
+            <li><i data-lucide="layers"></i> CEFR difficulty estimate, so you know what to revisit</li>
+          </ul>
+          <a class="btn btn-ghost" href="https://github.com/hungpt99-dev/Vocab" target="_blank" rel="noopener">
+            <i data-lucide="github"></i> See it in the source
+          </a>
+        </div>
+        <div class="xray-visual reveal">
+          <div class="xray-card">
+            <div class="xray-query">
+              <span class="xray-lang">TIẾNG VIỆT</span>
+              <p>“Bản báo cáo mà ủy ban công bố hôm qua đã gây lo ngại sâu sắc.”</p>
+            </div>
+            <div class="xray-result">
+              <div class="xray-row"><span>Core</span> The report the committee released yesterday caused deep concern.</div>
+              <div class="xray-row"><span>Structure</span> Main clause + relative clause modifying “bản báo cáo”.</div>
+              <div class="xray-row"><span>Why</span> Front-loading the report makes it the topic of the sentence.</div>
+              <div class="xray-row"><span>Simpler</span> Hôm qua ủy ban công bố báo cáo. Nó gây lo ngại.</div>
+              <div class="xray-level"><i data-lucide="signal"></i> CEFR B2</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -577,6 +635,7 @@
       <nav class="footer-col" aria-label="Product">
         <h4>Product</h4>
         <a href="#features">Features</a>
+        <a href="#xray">X-Ray Reading</a>
         <a href="#how">How it works</a>
         <a href="#radar">Vocabulary Radar</a>
         <a href="#faq">FAQ</a>
@@ -603,5 +662,6 @@
 
   <script src="https://unpkg.com/lucide@0.446.0"></script>
   <script src="script.js"></script>
+  <script src="enhance.js"></script>
 </body>
 </html>
