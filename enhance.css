@@ -258,6 +258,9 @@ h2 {
   border: 1px solid var(--border-strong);
   box-shadow: 0 50px 90px -40px rgba(0, 0, 0, 0.9),
     0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+}
+/* Tilt + float only the hero showcase, not the feature screenshots. */
+.hero-visual .browser {
   transform: rotateX(2.4deg) rotateY(-7deg) translateZ(0);
   transition: transform 700ms var(--ease), box-shadow 700ms var(--ease);
   animation: floaty 7s ease-in-out infinite;
@@ -376,7 +379,8 @@ mark.hl {
   padding: 26px 22px;
   text-align: left;
 }
-.step-num {
+/* Numbered tile on the learning-loop steps. */
+.loop-step .step-num {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -424,7 +428,6 @@ mark.hl {
   border: 1px solid var(--border);
   border-radius: 14px;
   background: var(--surface);
-  margin-bottom: 12px;
   overflow: hidden;
 }
 .faq-item:hover { border-color: var(--border-strong); }
@@ -503,7 +506,7 @@ mark.hl {
 @media (max-width: 960px) {
   .hero-inner { grid-template-columns: 1fr; }
   .hero-visual { order: -1; margin-bottom: 8px; }
-  .browser { transform: none; animation: none; }
+  .hero-visual .browser { transform: none; animation: none; }
   .privacy-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: repeat(2, 1fr); }
 }
@@ -523,7 +526,7 @@ mark.hl {
     scroll-behavior: auto !important;
   }
   .js .reveal { opacity: 1; transform: none; }
-  .browser { transform: none; }
+  .hero-visual .browser { transform: none; }
 }
 
 /* ---------- X-Ray Reading section ---------------------------------------- */
