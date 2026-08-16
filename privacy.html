@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Vocab</title>
+  <meta name="description" content="Learn how Vocab handles webpage content, vocabulary data, AI requests, and user-provided AI credentials." />
+  <meta name="theme-color" content="#0b0c10" />
+  <link rel="canonical" href="https://hungpt99-dev.github.io/VocabLandingPage/privacy.html" />
+  <!-- Canonical/og:image URLs follow the configured repository remote (hungpt99-dev/VocabLandingPage); update both if the repository is renamed. -->
+  <meta property="og:title" content="Privacy Policy — Vocab" />
+  <meta property="og:description" content="Learn how Vocab handles webpage content, vocabulary data, AI requests, and user-provided AI credentials." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://hungpt99-dev.github.io/VocabLandingPage/assets/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/icon32.png" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Vocab home">
+        <span class="brand-mark" aria-hidden="true"><img src="assets/icon128.png" alt="" width="128" height="128" /></span>
+        <span class="brand-name">Vocab</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#privacy">Privacy</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="https://github.com/hungpt99-dev/Vocab" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary" href="https://github.com/hungpt99-dev/Vocab/releases" target="_blank" rel="noopener" data-chrome-store>
+          <i data-lucide="chrome"></i> Add to Chrome
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HEAD -->
+    <section class="policy-hero">
+      <div class="container narrow">
+        <a class="back-link" href="index.html"><i data-lucide="arrow-left"></i> Back to home</a>
+        <span class="eyebrow">Privacy Policy</span>
+        <h1>Your data stays yours.</h1>
+        <p class="lead">
+          How Vocab — a local-first vocabulary Chrome extension — handles webpage content,
+          vocabulary data, AI requests, and your AI credentials.
+        </p>
+        <p class="policy-meta"><strong>Last updated:</strong> August 16, 2026</p>
+      </div>
+    </section>
+
+    <!-- POLICY -->
+    <section class="policy">
+      <div class="container narrow">
+        <article>
+          <h2>1. Introduction</h2>
+          <p>
+            Vocab is a vocabulary-learning Chrome extension. It saves words and phrases you select
+            while reading, highlights them on the pages you visit, and explains them — with
+            translation, meaning, examples, synonyms, pronunciation, and related words — using the
+            AI provider you configure or a keyless translation endpoint.
+          </p>
+          <p>
+            Vocab is local-first by design: there is no account system, no backend server operated
+            by the developer, and no telemetry. This policy explains what information Vocab
+            accesses, where that information is stored, and when it leaves your browser.
+          </p>
+        </article>
+
+        <article>
+          <h2>2. Data Stored Locally</h2>
+          <p>All of your vocabulary and learning data is stored locally in your browser:</p>
+          <ul>
+            <li>
+              <strong>Your vocabulary library</strong> — saved words and phrases with their
+              surrounding sentence, source page URL and title, your notes, tags, favourites, and
+              timestamps — is stored in IndexedDB in your browser profile.
+            </li>
+            <li>
+              <strong>Your settings</strong> — the AI provider and model you chose, target
+              language, highlighting and display preferences — are stored in
+              <code>chrome.storage.local</code>.
+            </li>
+            <li>
+              <strong>Backups you create yourself</strong> — versioned JSON exports and imports —
+              are files you choose to make and move.
+            </li>
+          </ul>
+          <p>
+            Vocab does not operate a developer-managed backend for storing this information. There
+            is no account, no cloud sync, and nothing in this list is uploaded to a server operated
+            by this project.
+          </p>
+        </article>
+
+        <article>
+          <h2>3. Webpage Content</h2>
+          <p>
+            When you select a word or phrase and use a Vocab feature, the extension reads the
+            selected text — and, when saving, the surrounding sentence and the page's title and URL —
+            to carry out the action you requested. This access is necessary to provide translation,
+            vocabulary explanations, examples, synonyms, pronunciation, AI enrichment, and
+            vocabulary highlighting.
+          </p>
+          <p>
+            To highlight your saved words, Vocab scans the text of the page you are currently on,
+            locally in your browser. Vocab does not continuously record your browsing history, and
+            it does not monitor the pages you visit beyond what its vocabulary features require.
+          </p>
+        </article>
+
+        <article>
+          <h2>4. AI Providers</h2>
+          <p>
+            When you request an AI-powered feature, the relevant text — the word or phrase, its
+            context, and your current prompt settings — is sent directly from the extension to the
+            AI provider you configured. Vocab supports OpenAI, OpenRouter, DeepSeek, Mistral, Groq,
+            Together, Google Gemini, Anthropic, LM Studio, Ollama, and custom OpenAI-compatible
+            endpoints.
+          </p>
+          <p>
+            These requests go straight from your browser to the provider you chose. Vocab does not
+            relay them through its own server, and it does not control or store data on those
+            providers' systems. Inline translation without a configured AI key uses a keyless public
+            translation endpoint (Google), also called directly from your browser.
+          </p>
+          <p>
+            Your use of any provider is subject to that provider's own privacy policy and terms of
+            service — please review them for details such as how they handle or retain data. This
+            policy does not make claims about the data retention practices of third-party
+            providers.
+          </p>
+        </article>
+
+        <article>
+          <h2>5. API Credentials</h2>
+          <p>
+            If you add an API key for a hosted AI provider, the key is stored locally in your
+            browser (<code>chrome.storage.local</code>) and is sent only to the provider you
+            selected, only when you initiate a request to that provider. Your key is never sent to
+            a Vocab-operated server — Vocab does not operate one — and it is never shared with other
+            providers.
+          </p>
+          <p>
+            Treat your API key like any credential: it is only as protected as your browser
+            profile. You can remove or replace it at any time in Settings, or use a local model
+            (Ollama or LM Studio) that requires no key at all.
+          </p>
+        </article>
+
+        <article>
+          <h2>6. Data Sharing</h2>
+          <p>
+            Vocab does not sell user data. It does not share your vocabulary or webpage content with
+            any third party for commercial purposes. The only outbound transmission is the data
+            required to fulfill a request you initiate: relevant text sent to the AI provider you
+            configured, or to the keyless translation endpoint when you use translation.
+          </p>
+        </article>
+
+        <article>
+          <h2>7. Analytics and Advertising</h2>
+          <p>
+            Vocab does not use webpage content or vocabulary data for advertising, and it does not
+            run analytics. The extension contains no telemetry, no crash reporting, and no
+            third-party tracking scripts, and it never shows or serves ads.
+          </p>
+        </article>
+
+        <article>
+          <h2>8. Browsing History</h2>
+          <p>
+            Vocab does not maintain a centralized browsing-history database. The extension reads
+            only the information required for its vocabulary functionality: the text of the page
+            you are on (to highlight saved words) and the content you explicitly select. It does
+            not build a log of the pages you visit.
+          </p>
+        </article>
+
+        <article>
+          <h2>9. Data Security</h2>
+          <p>
+            Vocab keeps your data on your device and limits outbound transmission to the requests
+            you make. Communication with AI providers and translation endpoints happens over HTTPS.
+          </p>
+          <p>
+            Stored locally does not mean invulnerable. Data in IndexedDB and
+            <code>chrome.storage.local</code> is only as protected as your browser profile, and a
+            locally stored API key could be read by anyone with access to that profile. If you want
+            nothing to leave your machine, use a local model and keep your key out of Settings.
+          </p>
+        </article>
+
+        <article>
+          <h2>10. User Control</h2>
+          <p>You control your data at every step:</p>
+          <ul>
+            <li>
+              <strong>Remove saved vocabulary</strong> — delete any entry from your library, or
+              clear the whole library.
+            </li>
+            <li>
+              <strong>Remove local extension data</strong> — uninstalling the extension from
+              <code>chrome://extensions</code> removes the extension's stored data with it.
+            </li>
+            <li>
+              <strong>Change or remove your AI configuration</strong> — edit or delete your API key
+              and provider settings at any time in Settings.
+            </li>
+            <li>
+              <strong>Stop using AI enrichment</strong> — saving, highlighting, and keyless
+              translation work without any AI key; simply don't trigger AI features.
+            </li>
+            <li>
+              <strong>Export your data</strong> — back up or transfer your vocabulary as versioned
+              JSON at any time.
+            </li>
+            <li>
+              <strong>Disable highlighting</strong> — turn on-page highlighting off in Settings.
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <h2>11. Third-Party Services</h2>
+          <p>
+            The AI providers supported by Vocab — OpenAI, OpenRouter, DeepSeek, Mistral, Groq,
+            Together, Google Gemini, Anthropic, LM Studio, Ollama, and any custom endpoint you
+            configure — are independent third-party services, as is the keyless translation
+            endpoint. Vocab is not operated by, affiliated with, or endorsed by these providers.
+            When you use them, their own terms of service and privacy policies apply; this policy
+            does not govern those services.
+          </p>
+        </article>
+
+        <article>
+          <h2>12. Changes to This Policy</h2>
+          <p>
+            We may update this policy when Vocab's data practices change — for example, if a
+            feature that transmits data differently is added. When we do, the "Last updated" date
+            at the top of this page will change. Continued use of the extension after changes take
+            effect means you accept the updated policy.
+          </p>
+        </article>
+
+        <article>
+          <h2>13. Contact</h2>
+          <p>
+            If you have questions about this policy or about how Vocab handles data, email
+            <a href="mailto:hungpt591@gmail.com">hungpt591@gmail.com</a>, or open an issue on the
+            <a href="https://github.com/hungpt99-dev/Vocab/issues" target="_blank" rel="noopener">Vocab GitHub repository</a>.
+            For more detail on how Vocab is built, see the
+            <a href="https://github.com/hungpt99-dev/Vocab#privacy" target="_blank" rel="noopener">privacy note in the project's README</a>.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true"><img src="assets/icon128.png" alt="" width="128" height="128" /></span>
+          <span class="brand-name">Vocab</span>
+        </a>
+        <p>A local-first AI vocabulary saver for Chrome.</p>
+      </div>
+      <nav class="footer-col" aria-label="Product">
+        <h4>Product</h4>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#privacy">Privacy</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <h4>Resources</h4>
+        <a href="https://github.com/hungpt99-dev/Vocab" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/hungpt99-dev/Vocab/releases" target="_blank" rel="noopener">Releases</a>
+        <a href="https://github.com/hungpt99-dev/Vocab/issues" target="_blank" rel="noopener">Issues</a>
+        <a href="https://github.com/hungpt99-dev/Vocab/blob/main/LICENSE" target="_blank" rel="noopener">License</a>
+        <a href="privacy.html" aria-current="page">Privacy Policy</a>
+      </nav>
+      <nav class="footer-col" aria-label="Connect">
+        <h4>Connect</h4>
+        <a href="https://github.com/hungpt99-dev" target="_blank" rel="noopener">hungpt99-dev</a>
+        <a href="https://github.com/hungpt99-dev/Vocab/blob/main/README.md" target="_blank" rel="noopener">Documentation</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year">2026</span> Vocab. MIT Licensed.</span>
+      <a href="#top">Back to top <i data-lucide="arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@0.446.0"></script>
+  <script src="script.js"></script>
+</body>
+</html>

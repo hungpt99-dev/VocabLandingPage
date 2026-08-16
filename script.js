@@ -1,3 +1,13 @@
+// Chrome Web Store listing URL.
+// TODO: replace with the real listing URL once the extension is published on the
+// Chrome Web Store (e.g. https://chromewebstore.google.com/detail/<id>). All
+// buttons marked with data-chrome-store resolve to this constant.
+const CHROME_STORE_URL = "https://github.com/hungpt99-dev/Vocab/releases";
+
+document.querySelectorAll("a[data-chrome-store]").forEach((a) => {
+  a.href = CHROME_STORE_URL;
+});
+
 // Initialize lucide icons
 if (window.lucide && typeof window.lucide.createIcons === "function") {
   window.lucide.createIcons();
